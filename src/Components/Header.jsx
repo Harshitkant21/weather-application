@@ -29,7 +29,7 @@ const Header = ({ theme, setTheme }) => {
           <li>About</li>
         </ul>
 
-        <div className="search-box">
+        <div className={`search-box ${theme}`}>
           <input type="text" placeholder="Search..." />
           <FontAwesomeIcon
             icon={faSearch}
@@ -38,7 +38,7 @@ const Header = ({ theme, setTheme }) => {
         </div>
 
         <FontAwesomeIcon
-          icon={theme === "light" ? faSun : faMoon}
+          icon={theme === "light" ? faMoon : faSun}
           className="toggle-icon"
           onClick={() => toggle()}
         />
