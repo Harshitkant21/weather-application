@@ -13,6 +13,7 @@ const Header = ({ theme, setTheme }) => {
       setTheme("light");
     }
   };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
@@ -22,10 +23,9 @@ const Header = ({ theme, setTheme }) => {
           alt="Logo here"
           className="logo"
         />
-        <ul>
+        <ul className={menuOpen ? "open" : ""}>
           <li>Home</li>
           <li>Products</li>
-          <li>Features</li>
           <li>About</li>
         </ul>
 
@@ -37,6 +37,14 @@ const Header = ({ theme, setTheme }) => {
           />
         </div>
 
+        <div
+          className={`hamburger ${theme}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <FontAwesomeIcon
           icon={theme === "light" ? faMoon : faSun}
           className="toggle-icon"
