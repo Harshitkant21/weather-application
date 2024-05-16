@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: transparent;
   padding: 15px 7%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 0 0 20px 20px;
@@ -20,7 +20,7 @@
   -o-border-radius: 0 0 20px 20px;
 }
 .navbar.dark {
-  background: #222;
+  background: transparent;
   box-shadow: 0px 10px 20px 0px rgba(255, 252, 252, 0.19),
     0px 6px 6px 0px rgba(252, 252, 252, 0.23);
   color: #fff;
@@ -41,6 +41,7 @@ ul li {
   display: inline-block;
   margin: 10px 20px;
   font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;

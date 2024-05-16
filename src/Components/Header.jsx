@@ -25,7 +25,6 @@ const Header = ({ theme, setTheme }) => {
         />
         <ul className={menuOpen ? "open" : ""}>
           <li>Home</li>
-          <li>Products</li>
           <li>About</li>
         </ul>
 
