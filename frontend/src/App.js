@@ -27,7 +27,7 @@ function App() {
           />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/about" element={<About />} />
-          <Route path="/weather/:city" element={<WeatherCard />} />
+          <Route path="/weather/:city" element={<WeatherCard theme={theme} />} />
         </Routes>
         <Footer theme={theme} />
       </Router>

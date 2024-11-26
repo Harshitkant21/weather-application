@@ -4,17 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo_white from "../assests/logo_white.png";
 import logo_dark from "../assests/logo.png";
+import { Link } from 'react-router-dom';
 
 const Footer = ({ theme }) => {
   return (
     <div className={`footer ${theme}`}>
       <div className="footer-main">
         <div className="footer-left">
-          <img
+        <Link to={"/"}><img
             src={theme === "light" ? logo_dark : logo_white}
             alt="SkyCast Logo"
             className="footer-logo"
-          />
+          /></Link>
           <p>Stay ahead with SkyCast for accurate weather forecasts.</p>
         </div>
         <div className="footer-right">

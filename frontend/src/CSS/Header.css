@@ -36,7 +36,7 @@
 .search-box {
   display: flex;
   align-items: center;
-  background-color: #242424;
+  background-color: #2d2d2d;
   padding: 10px 20px;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -91,6 +91,32 @@
 .icon_dark {
   color: #000;
   cursor: pointer;
+}
+
+.suggestions-dropdown {
+  list-style: none;
+  padding: 0; /* Remove extra padding */
+  margin: 5px 0 0; /* Adjust margin for proper alignment */
+  background: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: calc(12% + 5px); /* Position just below the input box */
+  right: calc(5% + 5px);; /* Align with the input box */
+  border-radius: 4px; /* Slightly rounded corners */
+  overflow: hidden; /* Ensures no extra space inside the box */
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent wrapping of long text */
+  transition: background 0.3s ease;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
 }
 
 @media (max-width: 777px) {

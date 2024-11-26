@@ -1,0 +1,184 @@
+.weather-icon {
+  font-size: 4rem;
+  color: #2c3e50;
+}
+.weather-icon.dark {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.icon{
+  font-size: 19px;
+  color: #2c3e50;
+}
+.icon.dark{
+  font-size: 19px;
+  color: #fff;
+}
+.weather-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.weather-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+}
+.weather-card.dark {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 0px 10px 20px 0px rgba(255, 252, 252, 0.19),
+    0px 6px 6px 0px rgba(252, 252, 252, 0.23);
+}
+
+.weather-card:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.weather-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+h2.dark{
+  color: #fff;
+}
+
+.weather-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.weather-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.weather-temp.dark {
+  color: #fff;
+}
+
+.weather-description {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #888;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.weather-item {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.weather-item.dark{
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #fff;
+  
+}
+.weather-item.dark:hover{
+  box-shadow: 0px 10px 20px 0px rgba(255, 252, 252, 0.19),
+    0px 6px 6px 0px rgba(252, 252, 252, 0.23);
+}
+
+.weather-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Slight shadow effect on hover */
+}
+
+.weather-item h3 {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 600;
+}
+h3.dark{
+  color: #fff;
+}
+
+.weather-item p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.weather-item p.dark{
+  color: #fff;
+}
+.weather-item p::before {
+  font-size: 1.8rem;
+}
+
+.load {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 25px;
+  height: 50px;
+  display: grid;
+  color: #000;
+  background:
+    linear-gradient(currentColor 0 0) top/100% 2px,
+    radial-gradient(farthest-side at top, #0000 calc(100% - 2px), currentColor calc(100% - 1px), #0000) top,
+    linear-gradient(currentColor 0 0) bottom/100% 2px,
+    radial-gradient(farthest-side at bottom, #0000 calc(100% - 2px), currentColor calc(100% - 1px), #0000) bottom;
+  background-size: 100% 1px, 100% 50%;
+  background-repeat: no-repeat;
+  animation: l18 4s infinite linear;
+}
+.loader.dark{
+  color: #fff;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
+}
+
+.loader::after {
+  animation-duration: 2s;
+}
+
+@keyframes l18 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.error {
+  text-align: center;
+  color: red;
+  font-size: 1.5rem;
+}
+
+.error::before {
+  content: "⚠️ "; /* Icon for error */
+  font-size: 1.8rem;
+}

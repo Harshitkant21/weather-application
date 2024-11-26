@@ -58,17 +58,62 @@
 .vector_home.dark {
   color: white;
 }
+
+/* .button {
+  background: #f9f9f9;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font: 1.2em sans-serif;
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+.button.dark {
+  background: #333;
+  color: white;
+}
+.button:hover {
+  background: #333;
+  color: white;
+} */
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #222;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.button.dark{
+  background-color: #fff;
+  color: #222;
+}
+.button:hover {
+  background-color: #444;
+}
+.button.dark:hover{
+  background-color: #9a9a9a;
+  color: #222;
+}
 @media (max-width: 777px) {
   .home {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
-  .content_home, .vector_home {
-    min-width: 100%; 
+  .content_home,
+  .vector_home {
+    min-width: 100%;
   }
 
   .vector_home {
-    display: none;  
+    display: none;
   }
 }
