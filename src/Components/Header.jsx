@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../CSS/Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,7 @@ const Header = ({ theme, setTheme }) => {
       setTheme("light");
     }
   };
-  const [menuOpen, setMenuOpen] = useState(false);
+
 
   return (
     <>
@@ -23,32 +23,21 @@ const Header = ({ theme, setTheme }) => {
           alt="Logo here"
           className="logo"
         />
-        <ul className={menuOpen ? "open" : ""}>
-          <li>Home</li>
-          <li>About</li>
-        </ul>
 
-        <div className={`search-box ${theme}`}>
-          <input type="text" placeholder="Search..." />
+        <div className="search">
+          <div className={`search-box ${theme}`}>
+            <input type="text" placeholder="Search..." />
+            <FontAwesomeIcon
+              icon={faSearch}
+              className={theme === "light" ? "icon_light" : "icon_dark"}
+            />
+          </div>
           <FontAwesomeIcon
-            icon={faSearch}
-            className={theme === "light" ? "icon_light" : "icon_dark"}
+            icon={theme === "light" ? faMoon : faSun}
+            className="toggle-icon"
+            onClick={() => toggle()}
           />
         </div>
-
-        <div
-          className={`hamburger ${theme}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <FontAwesomeIcon
-          icon={theme === "light" ? faMoon : faSun}
-          className="toggle-icon"
-          onClick={() => toggle()}
-        />
       </div>
     </>
   );
